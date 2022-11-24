@@ -9,7 +9,10 @@ const Navbar = ({ onOpenMenu }) => {
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to={ROUTES.CLIENT.HOME}>dolla</NavLogo>
+          <NavLogo to={ROUTES.CLIENT.HOME}>
+            <Part1>top</Part1>
+            <Part2>line</Part2>
+          </NavLogo>
 
           <MobileIcon onClick={onOpenMenu}>
             <FaBars />
@@ -70,7 +73,7 @@ const NavbarContainer = styled.div`
 `;
 
 const NavLogo = styled(RouterLink)`
-  color: #fff;
+  color: #e8591d;
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
@@ -79,6 +82,14 @@ const NavLogo = styled(RouterLink)`
   margin-left: 24px;
   font-weight: 700;
   text-decoration: none;
+`;
+
+const Part1 = styled.span`
+  color: #e8591d;
+`;
+
+const Part2 = styled.span`
+  color: #2b3864;
 `;
 
 const MobileIcon = styled.div`
@@ -122,7 +133,7 @@ const NavLink = styled(ScrollLink)`
   cursor: pointer;
 
   &:active {
-    border-bottom: 3px solid #01bf71;
+    border-bottom: 3px solid #e8591d;
   }
 `;
 
@@ -137,7 +148,7 @@ const NavBtn = styled.nav`
 
 const NavBtnLink = styled(RouterLink)`
   border-radius: 50px;
-  background-color: #01bf71;
+  background-color: #e8591d;
   white-space: nowrap;
   padding: 10px 22px;
   color: #010606;
