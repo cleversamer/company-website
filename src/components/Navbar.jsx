@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import { ROUTES } from "client";
 import { FaBars } from "react-icons/fa";
 
@@ -44,7 +45,7 @@ const Navbar = ({ onOpenMenu }) => {
 const Nav = styled.nav`
   background-color: #000;
   height: 80px;
-  /* margin-top: -80px; */
+  margin-top: -80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,7 +69,7 @@ const NavbarContainer = styled.div`
   max-width: 1100px;
 `;
 
-const NavLogo = styled(Link)`
+const NavLogo = styled(RouterLink)`
   color: #fff;
   justify-self: flex-start;
   cursor: pointer;
@@ -111,7 +112,7 @@ const NavItem = styled.li`
   height: 80px;
 `;
 
-const NavLink = styled(Link)`
+const NavLink = styled(ScrollLink)`
   color: #fff;
   display: flex;
   align-items: center;
@@ -134,7 +135,7 @@ const NavBtn = styled.nav`
   }
 `;
 
-const NavBtnLink = styled(Link)`
+const NavBtnLink = styled(RouterLink)`
   border-radius: 50px;
   background-color: #01bf71;
   white-space: nowrap;

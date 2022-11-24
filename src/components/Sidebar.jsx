@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import { FaTimes } from "react-icons/fa";
 import { ROUTES } from "client";
 
@@ -12,19 +13,19 @@ const Sidebar = ({ isOpen, onCloseMenu }) => {
 
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to={ROUTES.CLIENT.ABOUT} onClick={onCloseMenu}>
+          <SidebarLink to="about" onClick={onCloseMenu}>
             About
           </SidebarLink>
 
-          <SidebarLink to={ROUTES.CLIENT.DISCOVER} onClick={onCloseMenu}>
+          <SidebarLink to="discover" onClick={onCloseMenu}>
             Discover
           </SidebarLink>
 
-          <SidebarLink to={ROUTES.CLIENT.SERVICES} onClick={onCloseMenu}>
+          <SidebarLink to="services" onClick={onCloseMenu}>
             Services
           </SidebarLink>
 
-          <SidebarLink to={ROUTES.CLIENT.SIGNUP} onClick={onCloseMenu}>
+          <SidebarLink to="signup" onClick={onCloseMenu}>
             Sign Up
           </SidebarLink>
         </SidebarMenu>
@@ -80,7 +81,7 @@ const SidebarMenu = styled.ul`
   }
 `;
 
-const SidebarLink = styled(Link)`
+const SidebarLink = styled(ScrollLink)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,7 +103,7 @@ const SideBtnWrap = styled.div`
   justify-content: center;
 `;
 
-const SidebarRoute = styled(Link)`
+const SidebarRoute = styled(RouterLink)`
   border-radius: 50px;
   background-color: #01bf71;
   white-space: nowrap;
