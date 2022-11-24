@@ -1,6 +1,11 @@
 export const ROUTES = {
   CLIENT: {
-    HOME: "/home",
+    HOME: "/",
+    ABOUT: "/about",
+    DISCOVER: "/discover",
+    SERVICES: "/services",
+    SIGNUP: "/signup",
+    SIGNIN: "/signin",
     NOT_FOUND: "/not-found",
   },
 };
