@@ -1,14 +1,16 @@
-import styled from "styled-components";
+import { useState } from "react";
 import Navbar from "components/navbar";
+import Sidebar from "components/sidebar";
 
 const Home = () => {
+  const [isOpen, setOpen] = useState(false);
+
   return (
-    <Container>
-      <Navbar />
-    </Container>
+    <>
+      <Sidebar isOpen={isOpen} onCloseMenu={() => setOpen(false)} />
+      <Navbar onOpenMenu={() => setOpen(true)} />
+    </>
   );
 };
-
-const Container = styled.div``;
 
 export default Home;

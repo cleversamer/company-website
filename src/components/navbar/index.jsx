@@ -1,18 +1,16 @@
 import styled from "styled-components";
-import { Link as LinkR } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ROUTES } from "client";
-
-import { Link as LinkScroll } from "react-scroll";
 import { FaBars } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ({ onOpenMenu }) => {
   return (
     <>
       <Nav>
         <NavbarContainer>
           <NavLogo to={ROUTES.CLIENT.HOME}>dolla</NavLogo>
 
-          <MobileIcon>
+          <MobileIcon onClick={onOpenMenu}>
             <FaBars />
           </MobileIcon>
 
@@ -70,7 +68,7 @@ const NavbarContainer = styled.div`
   max-width: 1100px;
 `;
 
-const NavLogo = styled(LinkR)`
+const NavLogo = styled(Link)`
   color: #fff;
   justify-self: flex-start;
   cursor: pointer;
@@ -113,7 +111,7 @@ const NavItem = styled.li`
   height: 80px;
 `;
 
-const NavLink = styled(LinkScroll)`
+const NavLink = styled(Link)`
   color: #fff;
   display: flex;
   align-items: center;
@@ -136,7 +134,7 @@ const NavBtn = styled.nav`
   }
 `;
 
-const NavBtnLink = styled(LinkR)`
+const NavBtnLink = styled(Link)`
   border-radius: 50px;
   background-color: #01bf71;
   white-space: nowrap;
