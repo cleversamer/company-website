@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import Button from "./Button";
-import { home1 as data } from "data";
 
-const Info = () => {
+const Info = ({ data }) => {
   return (
     <Container id={data.id} lightbg={data.lightBg}>
       <InfoWrapper>
@@ -55,7 +54,7 @@ const Container = styled.div`
 const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: fit-content;
+  max-height: fit-content;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -64,8 +63,7 @@ const InfoWrapper = styled.div`
   justify-content: center;
 
   @media screen and (max-width: 768px) {
-    padding: 0 24px;
-    padding-top: 30px;
+    padding: 30px 10px;
   }
 `;
 

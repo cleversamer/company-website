@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-import { ROUTES } from "client";
 import { FaBars } from "react-icons/fa";
 
 const Navbar = ({ onOpenMenu }) => {
@@ -9,7 +7,7 @@ const Navbar = ({ onOpenMenu }) => {
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to={ROUTES.CLIENT.HOME}>
+          <NavLogo href="#">
             <Part1>top</Part1>
             <Part2>line</Part2>
           </NavLogo>
@@ -20,24 +18,24 @@ const Navbar = ({ onOpenMenu }) => {
 
           <NavMenu>
             <NavItem>
-              <NavLink to={ROUTES.CLIENT.ABOUT}>About</NavLink>
+              <NavLink to="about">About</NavLink>
             </NavItem>
 
             <NavItem>
-              <NavLink to={ROUTES.CLIENT.DISCOVER}>Discover</NavLink>
+              <NavLink to="discover">Discover</NavLink>
             </NavItem>
 
             <NavItem>
-              <NavLink to={ROUTES.CLIENT.SERVICES}>Services</NavLink>
+              <NavLink to="services">Services</NavLink>
             </NavItem>
 
             <NavItem>
-              <NavLink to={ROUTES.CLIENT.SIGNUP}>Sign Up</NavLink>
+              <NavLink to="signup">Sign Up</NavLink>
             </NavItem>
           </NavMenu>
 
           <NavBtn>
-            <NavBtnLink to={ROUTES.CLIENT.SIGNIN}>Sign In</NavBtnLink>
+            <NavBtnLink to="discover">Discover</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>
@@ -72,7 +70,7 @@ const NavbarContainer = styled.div`
   max-width: 1100px;
 `;
 
-const NavLogo = styled(RouterLink)`
+const NavLogo = styled.a`
   color: #e8591d;
   justify-self: flex-start;
   cursor: pointer;
@@ -146,7 +144,7 @@ const NavBtn = styled.nav`
   }
 `;
 
-const NavBtnLink = styled(RouterLink)`
+const NavBtnLink = styled(ScrollLink)`
   border-radius: 50px;
   background-color: #e8591d;
   white-space: nowrap;

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import data from "data";
 import Navbar from "components/Navbar";
 import Sidebar from "components/Sidebar";
 import Hero from "components/Hero";
@@ -12,7 +13,9 @@ const Home = () => {
       <Sidebar isOpen={isOpen} onCloseMenu={() => setOpen(false)} />
       <Navbar onOpenMenu={() => setOpen(true)} />
       <Hero />
-      <Info />
+      <Info data={data.home1} />
+      <Info data={data.home2} />
+      <Info data={data.home3} />
     </>
   );
 };
