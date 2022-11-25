@@ -20,7 +20,7 @@ const Info = () => {
                   to="home"
                   smooth="true"
                   duration={500}
-                  spy="true"
+                  spy={true}
                   exact="true"
                   offset={-80}
                   primary={data.primary ? 1 : 0}
@@ -48,20 +48,25 @@ const Container = styled.div`
   background-color: ${({ lightbg }) => (lightbg ? "#f9f9f9" : "#010606")};
 
   @media screen and (max-width: 768px) {
-    padding: 100px 0;
+    /* padding: 100px 0; */
   }
 `;
 
 const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 860px;
+  height: fit-content;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 24px;
+  padding: 50px 24px;
   justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 24px;
+    padding-top: 30px;
+  }
 `;
 
 const InfoRow = styled.div`
