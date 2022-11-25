@@ -35,12 +35,13 @@ const Services = () => {
 };
 
 const Container = styled.div`
-  height: 800px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #010606;
+  padding: 70px 24px;
 
   @media screen and (max-width: 768px) {
     height: 1100px;
@@ -58,7 +59,7 @@ const Wrapper = styled.div`
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   grid-gap: 16px;
-  padding: 0 50px;
+  /* padding: 0 50px; */
 
   @media screen and (max-width: 1000px) {
     grid-template-columns: repeat(2, 1fr);

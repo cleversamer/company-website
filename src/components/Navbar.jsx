@@ -1,13 +1,26 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Link as ScrollLink } from "react-scroll";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { FaBars } from "react-icons/fa";
 
 const Navbar = ({ onOpenMenu }) => {
+  const [scrollNav, setScrollNav] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  const onScroll = () => setScrollNav(window.scrollY >= 80);
+
   return (
     <>
-      <Nav>
+      <Nav scrollnav={scrollNav}>
         <NavbarContainer>
-          <NavLogo href="#">
+          <NavLogo href="#" onClick={() => scroll.scrollToTop()}>
             <Part1>top</Part1>
             <Part2>line</Part2>
           </NavLogo>
@@ -18,24 +31,73 @@ const Navbar = ({ onOpenMenu }) => {
 
           <NavMenu>
             <NavItem>
-              <NavLink to="about">About</NavLink>
+              <NavLink
+                to="about"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+                activeClass="active"
+              >
+                About
+              </NavLink>
             </NavItem>
 
             <NavItem>
-              <NavLink to="discover">Discover</NavLink>
+              <NavLink
+                to="discover"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+                activeClass="active"
+              >
+                Discover
+              </NavLink>
             </NavItem>
 
             <NavItem>
-              <NavLink to="services">Services</NavLink>
+              <NavLink
+                to="services"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+                activeClass="active"
+              >
+                Services
+              </NavLink>
             </NavItem>
 
             <NavItem>
-              <NavLink to="signup">Sign Up</NavLink>
+              <NavLink
+                to="signup"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-50}
+                activeClass="active"
+              >
+                Sign Up
+              </NavLink>
             </NavItem>
           </NavMenu>
 
           <NavBtn>
-            <NavBtnLink to="discover">Discover</NavBtnLink>
+            <NavBtnLink
+              to="discover"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+            >
+              Discover
+            </NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>
@@ -44,7 +106,7 @@ const Navbar = ({ onOpenMenu }) => {
 };
 
 const Nav = styled.nav`
-  background-color: #000;
+  background-color: ${({ scrollnav }) => (scrollnav ? "#000" : "transparent")};
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -130,7 +192,7 @@ const NavLink = styled(ScrollLink)`
   height: 100%;
   cursor: pointer;
 
-  &:active {
+  &.active {
     border-bottom: 3px solid #e8591d;
   }
 `;
