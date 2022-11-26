@@ -16,9 +16,8 @@ const Home = () => {
       <Navbar onOpenMenu={() => setOpen(true)} />
       <Hero />
       <Info data={data.home1} />
-      <Info data={data.home2} />
       <Services />
-      <Info data={data.home3} />
+      <Info data={data.home2} />
       <Footer />
     </>
   );

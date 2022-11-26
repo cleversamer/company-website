@@ -14,20 +14,22 @@ const Info = ({ data }) => {
 
               <SubTitle darktext={data.darkText}>{data.description}</SubTitle>
 
-              <BtnWrap>
-                <Button
-                  to="home"
-                  smooth="true"
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                  primary={data.primary ? 1 : 0}
-                  dark={data.dark ? 1 : 0}
-                >
-                  {data.buttonLabel}
-                </Button>
-              </BtnWrap>
+              {data.buttonLabel && (
+                <BtnWrap>
+                  <Button
+                    to={data.buttonTo}
+                    smooth="true"
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={-80}
+                    primary={data.primary ? 1 : 0}
+                    dark={data.dark ? 1 : 0}
+                  >
+                    {data.buttonLabel}
+                  </Button>
+                </BtnWrap>
+              )}
             </TextWrapper>
           </Column1>
 
@@ -44,6 +46,7 @@ const Info = ({ data }) => {
 
 const Container = styled.div`
   color: #fff;
+  font-family: "Cairo", "sans-serif";
   background-color: ${({ lightbg }) => (lightbg ? "#f9f9f9" : "#010606")};
 
   @media screen and (max-width: 768px) {
@@ -59,8 +62,9 @@ const InfoWrapper = styled.div`
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
-  padding: 50px 24px;
+  padding: 100px 24px;
   justify-content: center;
+  text-align: right;
 
   @media screen and (max-width: 768px) {
     padding: 30px 10px;
@@ -100,7 +104,7 @@ const TextWrapper = styled.div`
 
 const TopLine = styled.p`
   color: #e8591d;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 16px;
   font-weight: 700;
   letter-spacing: 1.4px;
@@ -110,9 +114,9 @@ const TopLine = styled.p`
 
 const Heading = styled.h1`
   margin-bottom: 24px;
-  font-size: 48px;
-  line-height: 1.1;
-  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.5;
+  font-weight: 700;
   color: ${({ lighttext }) => (lighttext ? "#f7f8fa" : "#010606")};
 
   @media screen and (max-width: 480px) {
@@ -124,13 +128,20 @@ const SubTitle = styled.p`
   max-width: 440px;
   margin-bottom: 35px;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 1.6;
+  font-weight: 600;
   color: ${({ darktext }) => (darktext ? "#010606" : "#fff")};
+  margin-left: auto;
 `;
 
 const BtnWrap = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
+
+  a {
+    font-size: 18px;
+    font-weight: 600;
+  }
 `;
 
 const ImgWrap = styled.div`
@@ -140,7 +151,7 @@ const ImgWrap = styled.div`
 
 const Img = styled.img`
   width: 100%;
-  margin: 0 0 140px 0;
+  margin: 0 0 10px 0;
   padding-right: 0;
 `;
 

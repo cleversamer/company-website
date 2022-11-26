@@ -3,30 +3,33 @@ import styled from "styled-components";
 const Services = () => {
   return (
     <Container id="services">
-      <Title>Our Services</Title>
+      <Title>خدماتنا</Title>
 
       <Wrapper>
         <Card>
-          <Icon src="/assets/images/svg-1.svg" alt="" />
-          <Subtitle>Reduce Expenses</Subtitle>
+          <Icon src="/assets/images/svg-2.svg" alt="" />
+          <Subtitle>برمجة التطبيقات</Subtitle>
           <Description>
-            We help reduce your fees and increase your overall revenue.
+            نقدّم خدمات برمجة وتطوير تطبيقات الويب والموبايل على أعلى مستوى
+            ولدينا خبراء ومختصّين في هذا المجال
           </Description>
         </Card>
 
         <Card>
-          <Icon src="/assets/images/svg-1.svg" alt="" />
-          <Subtitle>Virtual Offices</Subtitle>
+          <Icon src="/assets/images/svg-3.svg" alt="" />
+          <Subtitle>الأبحاث والكتب</Subtitle>
           <Description>
-            You can access our platform online anywhere in the world.
+            نقّدم خدمات الأبحاث العلمية وترجمة الكتب والمقالات والفيديوهات وحل
+            الواجبات الدراسية
           </Description>
         </Card>
 
         <Card>
-          <Icon src="/assets/images/svg-1.svg" alt="" />
-          <Subtitle>Premium Benefits</Subtitle>
+          <Icon src="/assets/images/svg-4.svg" alt="" />
+          <Subtitle>التصميم</Subtitle>
           <Description>
-            Unlock our special membership card that returns 5% cash back.
+            نقدّم خدمات تصميم تطبيقات الويب والموبايل، تصميم غلاف، تصميم لوجو،
+            والبروشورات
           </Description>
         </Card>
       </Wrapper>
@@ -35,13 +38,15 @@ const Services = () => {
 };
 
 const Container = styled.div`
+  font-family: "Cairo", "sans-serif";
   height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #010606;
-  padding: 70px 24px;
+  padding: 20px 24px;
+  padding-bottom: 100px;
 
   @media screen and (max-width: 768px) {
     height: 1100px;
@@ -97,7 +102,8 @@ const Icon = styled.img`
 `;
 
 const Title = styled.h1`
-  font-size: 2.5rem;
+  font-size: 2.7rem;
+  font-weight: 600;
   color: #fff;
   margin-bottom: 64px;
 

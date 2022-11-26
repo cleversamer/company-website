@@ -2,22 +2,22 @@ import styled from "styled-components";
 import { Link as RouterLink } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 import {
-  FaFacebook,
+  FaGoogle,
   FaInstagram,
+  FaTelegram,
   FaTwitter,
   FaWhatsapp,
-  FaYoutube,
 } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <Container>
       <Wrap>
-        <LinksContainer>
+        {/* <LinksContainer>
           <LinksWrapper>
             <LinkItems>
-              <LinkTitle>About us</LinkTitle>
-              <Link to="">How it works</Link>
+              <LinkTitle>من نحن</LinkTitle>
+              <Link to="">كيف يمكنك </Link>
               <Link to="">Testimonials</Link>
               <Link to="">Careers</Link>
               <Link to="">Investors</Link>
@@ -52,7 +52,7 @@ const Footer = () => {
               <Link to="">YouTube</Link>
             </LinkItems>
           </LinksWrapper>
-        </LinksContainer>
+        </LinksContainer> */}
 
         <SocialMedia>
           <SocialMediaWrap>
@@ -67,15 +67,15 @@ const Footer = () => {
 
             <SocialIcons>
               <SocialIconLink
-                href="https://facebook.com"
+                href="https://t.me/topline2030"
                 target="__blank"
                 aria-label="Facebook"
               >
-                <FaFacebook />
+                <FaTelegram />
               </SocialIconLink>
 
               <SocialIconLink
-                href="https://instagram.com"
+                href="https://instagram.com/toplinework"
                 target="__blank"
                 aria-label="Instagram"
               >
@@ -83,15 +83,7 @@ const Footer = () => {
               </SocialIconLink>
 
               <SocialIconLink
-                href="https://youtube.com"
-                target="__blank"
-                aria-label="YouTube"
-              >
-                <FaYoutube />
-              </SocialIconLink>
-
-              <SocialIconLink
-                href="https://twitter.com"
+                href="https://twitter.com/topline2030"
                 target="__blank"
                 aria-label="Twitter"
               >
@@ -99,11 +91,19 @@ const Footer = () => {
               </SocialIconLink>
 
               <SocialIconLink
-                href="https://whatsapp.com"
+                href="https://wa.me/970599563638"
                 target="__blank"
                 aria-label="Whatsapp"
               >
                 <FaWhatsapp />
+              </SocialIconLink>
+
+              <SocialIconLink
+                href="mailto:topline.work.2030@gmail.com"
+                target="__blank"
+                aria-label="G-Mail"
+              >
+                <FaGoogle />
               </SocialIconLink>
             </SocialIcons>
           </SocialMediaWrap>

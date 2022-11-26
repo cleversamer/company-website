@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-import { FaTimes } from "react-icons/fa";
-import { ROUTES } from "client";
+import { FaTimes, FaWhatsapp } from "react-icons/fa";
 
 const Sidebar = ({ isOpen, onCloseMenu }) => {
   return (
@@ -14,24 +12,30 @@ const Sidebar = ({ isOpen, onCloseMenu }) => {
       <SidebarWrapper>
         <SidebarMenu>
           <SidebarLink to="about" onClick={onCloseMenu}>
-            About
+            من نحن
           </SidebarLink>
 
-          <SidebarLink to="discover" onClick={onCloseMenu}>
+          {/* <SidebarLink to="discover" onClick={onCloseMenu}>
             Discover
-          </SidebarLink>
+          </SidebarLink> */}
 
           <SidebarLink to="services" onClick={onCloseMenu}>
-            Services
+            خدماتنا
           </SidebarLink>
 
-          <SidebarLink to="signup" onClick={onCloseMenu}>
-            Sign Up
+          <SidebarLink to="contact-us" onClick={onCloseMenu}>
+            تواصل معنا
           </SidebarLink>
         </SidebarMenu>
 
         <SideBtnWrap>
-          <SidebarRoute to={ROUTES.CLIENT.SIGNIN}>Sign In</SidebarRoute>
+          <SidebarOuterLink
+            href="https://wa.me/970599563638"
+            target="__blank"
+            aria-label="Whatsapp"
+          >
+            <FaWhatsapp /> أطلب خدمتك
+          </SidebarOuterLink>
         </SideBtnWrap>
       </SidebarWrapper>
     </Container>
@@ -39,6 +43,7 @@ const Sidebar = ({ isOpen, onCloseMenu }) => {
 };
 
 const Container = styled.aside`
+  font-family: "Cairo", "sans-serif";
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -103,7 +108,7 @@ const SideBtnWrap = styled.div`
   justify-content: center;
 `;
 
-const SidebarRoute = styled(RouterLink)`
+const SidebarOuterLink = styled.a`
   border-radius: 50px;
   background-color: #e8591d;
   white-space: nowrap;
@@ -115,6 +120,13 @@ const SidebarRoute = styled(RouterLink)`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  svg {
+    font-size: 20px;
+  }
 
   &:hover {
     transition: all 0.2s ease-in-out;

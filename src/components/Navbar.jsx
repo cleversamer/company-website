@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaWhatsapp } from "react-icons/fa";
 
 const Navbar = ({ onOpenMenu }) => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -40,11 +40,11 @@ const Navbar = ({ onOpenMenu }) => {
                 offset={-80}
                 activeClass="active"
               >
-                About
+                من نحن
               </NavLink>
             </NavItem>
 
-            <NavItem>
+            {/* <NavItem>
               <NavLink
                 to="discover"
                 smooth={true}
@@ -54,9 +54,9 @@ const Navbar = ({ onOpenMenu }) => {
                 offset={-80}
                 activeClass="active"
               >
-                Discover
+                إكتشفنا
               </NavLink>
-            </NavItem>
+            </NavItem> */}
 
             <NavItem>
               <NavLink
@@ -65,16 +65,16 @@ const Navbar = ({ onOpenMenu }) => {
                 duration={500}
                 spy={true}
                 exact="true"
-                offset={-80}
+                offset={-50}
                 activeClass="active"
               >
-                Services
+                خدماتنا
               </NavLink>
             </NavItem>
 
             <NavItem>
               <NavLink
-                to="signup"
+                to="contact-us"
                 smooth={true}
                 duration={500}
                 spy={true}
@@ -82,21 +82,18 @@ const Navbar = ({ onOpenMenu }) => {
                 offset={-50}
                 activeClass="active"
               >
-                Sign Up
+                تواصل معنا
               </NavLink>
             </NavItem>
           </NavMenu>
 
           <NavBtn>
             <NavBtnLink
-              to="discover"
-              smooth={true}
-              duration={500}
-              spy={true}
-              exact="true"
-              offset={-80}
+              href="https://wa.me/970599563638"
+              target="__blank"
+              aria-label="Whatsapp"
             >
-              Discover
+              <FaWhatsapp /> أطلب خدمتك
             </NavBtnLink>
           </NavBtn>
         </NavbarContainer>
@@ -184,6 +181,9 @@ const NavItem = styled.li`
 `;
 
 const NavLink = styled(ScrollLink)`
+  font-family: "Cairo", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
   color: #fff;
   display: flex;
   align-items: center;
@@ -191,6 +191,11 @@ const NavLink = styled(ScrollLink)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+
+  &:hover {
+    transition: 0.2s ease-out;
+    color: #e8591d;
+  }
 
   &.active {
     border-bottom: 3px solid #e8591d;
@@ -206,7 +211,9 @@ const NavBtn = styled.nav`
   }
 `;
 
-const NavBtnLink = styled(ScrollLink)`
+const NavBtnLink = styled.a`
+  font-family: "Cairo", sans-serif;
+  font-weight: 600;
   border-radius: 50px;
   background-color: #e8591d;
   white-space: nowrap;
@@ -218,6 +225,13 @@ const NavBtnLink = styled(ScrollLink)`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  svg {
+    font-size: 20px;
+  }
 
   &:hover {
     transition: all 0.2s ease-in-out;

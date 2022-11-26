@@ -21,22 +21,28 @@ const Hero = () => {
       </HeroBg>
 
       <HeroContent>
-        <HeroTitle>Virtual Banking Made Easy</HeroTitle>
+        <HeroTitle>فريق توب لاين</HeroTitle>
 
         <HeroDescription>
-          Sign up for a new account and receive $250 in credit towards your next
-          payment.
+          فريق يقدّم خدمات متعددة، جوائز التميّز، المحتوى الإعلامي المتميّز،
+          التصميم بأنواعه، الأبحاث والكتب، برمجة تطبيقات الويب والموبايل، وغيرها
+          من الخدمات
         </HeroDescription>
 
         <HeroBtnWrapper>
           <Button
-            to="signup"
+            to="discover"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary="true"
             dark="true"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
           >
-            Get started {hover ? <ArrowForward /> : <ArrowRight />}
+            إكتشفنا{hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
         </HeroBtnWrapper>
       </HeroContent>
@@ -91,6 +97,7 @@ const VideoBg = styled.video`
 `;
 
 const HeroContent = styled.div`
+  font-family: "Cairo", sans-serif;
   z-index: 3;
   max-width: 1200px;
   position: absolute;
@@ -103,6 +110,8 @@ const HeroContent = styled.div`
 const HeroTitle = styled.h1`
   color: #fff;
   font-size: 48px;
+  font-weight: 1000;
+  color: #e8591d;
   text-align: center;
 
   @media screen and (max-width: 768px) {
@@ -115,9 +124,9 @@ const HeroTitle = styled.h1`
 `;
 
 const HeroDescription = styled.p`
-  margin-top: 24px;
+  margin-top: 10px;
   color: #fff;
-  font-size: 24px;
+  font-size: 23px;
   text-align: center;
   max-width: 600px;
 
@@ -135,6 +144,11 @@ const HeroBtnWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  a {
+    font-family: "Cairo", sans-serif;
+    font-weight: 700;
+  }
 `;
 
 const ArrowForward = styled(MdArrowForward)`
