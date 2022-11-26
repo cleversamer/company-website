@@ -3,16 +3,27 @@ import Button from "./Button";
 
 const Info = ({ data }) => {
   return (
-    <Container id={data.id} lightbg={data.lightBg}>
+    <Container
+      id={data.id}
+      // lightbg={data.lightBg}
+    >
       <InfoWrapper>
         <InfoRow imgstart={data.imgStart}>
           <Column1>
             <TextWrapper>
               <TopLine>{data.topLine}</TopLine>
 
-              <Heading lighttext={data.lightText}>{data.headLine}</Heading>
+              <Heading
+              // lighttext={data.lightText}
+              >
+                {data.headLine}
+              </Heading>
 
-              <SubTitle darktext={data.darkText}>{data.description}</SubTitle>
+              <SubTitle
+              // darktext={data.darkText}
+              >
+                {data.description}
+              </SubTitle>
 
               {data.buttonLabel && (
                 <BtnWrap>
@@ -24,7 +35,7 @@ const Info = ({ data }) => {
                     exact="true"
                     offset={-80}
                     primary={data.primary ? 1 : 0}
-                    dark={data.dark ? 1 : 0}
+                    // dark={data.dark ? 1 : 0}
                   >
                     {data.buttonLabel}
                   </Button>
@@ -47,7 +58,7 @@ const Info = ({ data }) => {
 const Container = styled.div`
   color: #fff;
   font-family: "Cairo", "sans-serif";
-  background-color: ${({ lightbg }) => (lightbg ? "#f9f9f9" : "#010606")};
+  background-color: #f9f9f9;
 
   @media screen and (max-width: 768px) {
     /* padding: 100px 0; */
@@ -117,7 +128,7 @@ const Heading = styled.h1`
   font-size: 36px;
   line-height: 1.5;
   font-weight: 700;
-  color: ${({ lighttext }) => (lighttext ? "#f7f8fa" : "#010606")};
+  color: #010606;
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
@@ -130,7 +141,7 @@ const SubTitle = styled.p`
   font-size: 18px;
   line-height: 1.6;
   font-weight: 600;
-  color: ${({ darktext }) => (darktext ? "#010606" : "#fff")};
+  color: #010606;
   margin-left: auto;
 `;
 

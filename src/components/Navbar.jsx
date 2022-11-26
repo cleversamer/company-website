@@ -25,7 +25,7 @@ const Navbar = ({ onOpenMenu }) => {
             <Part2>line</Part2>
           </NavLogo>
 
-          <MobileIcon onClick={onOpenMenu}>
+          <MobileIcon scrollnav={scrollNav} onClick={onOpenMenu}>
             <FaBars />
           </MobileIcon>
 
@@ -89,6 +89,7 @@ const Navbar = ({ onOpenMenu }) => {
 
           <NavBtn>
             <NavBtnLink
+              scrollnav={scrollNav}
               href="https://wa.me/970599563638"
               target="__blank"
               aria-label="Whatsapp"
@@ -103,7 +104,9 @@ const Navbar = ({ onOpenMenu }) => {
 };
 
 const Nav = styled.nav`
-  background-color: ${({ scrollnav }) => (scrollnav ? "#000" : "transparent")};
+  background-color: ${({ scrollnav }) =>
+    scrollnav ? "#f9f9f9" : "transparent"};
+  color: ${({ scrollnav }) => (scrollnav ? "#010606" : "#f9f9f9")};
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -151,6 +154,7 @@ const Part2 = styled.span`
 
 const MobileIcon = styled.div`
   display: none;
+  color: ${({ scrollnav }) => (scrollnav ? "#010606" : "#fff")};
 
   @media screen and (max-width: 768px) {
     display: block;
@@ -160,7 +164,6 @@ const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #fff;
   }
 `;
 
@@ -184,7 +187,7 @@ const NavLink = styled(ScrollLink)`
   font-family: "Cairo", sans-serif;
   font-size: 18px;
   font-weight: 600;
-  color: #fff;
+  color: inherit;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -215,10 +218,10 @@ const NavBtnLink = styled.a`
   font-family: "Cairo", sans-serif;
   font-weight: 600;
   border-radius: 50px;
-  background-color: #e8591d;
+  background-color: ${({ scrollnav }) => (scrollnav ? "#010606" : "#e8591d")};
   white-space: nowrap;
   padding: 10px 22px;
-  color: #010606;
+  color: ${({ scrollnav }) => (scrollnav ? "#fff" : "#010606")};
   font-size: 16px;
   outline: none;
   border: none;
@@ -235,8 +238,8 @@ const NavBtnLink = styled.a`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background-color: #fff;
-    color: #010606;
+    background-color: ${({ scrollnav }) => (scrollnav ? "#e8591d" : "#fff")};
+    color: ${({ scrollnav }) => (scrollnav ? "#fff" : "#010606")};
   }
 `;
 

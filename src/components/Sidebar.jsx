@@ -115,6 +115,7 @@ const SidebarOuterLink = styled.a`
   padding: 16px 64px;
   color: #010606;
   font-size: 16px;
+  font-weight: 700;
   outline: none;
   border: none;
   cursor: pointer;

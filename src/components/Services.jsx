@@ -44,7 +44,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #010606;
+  background-color: #f9f9f9;
   padding: 20px 24px;
   padding-bottom: 100px;
 
@@ -63,7 +63,7 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  grid-gap: 16px;
+  grid-gap: 20px;
   /* padding: 0 50px; */
 
   @media screen and (max-width: 1000px) {
@@ -85,7 +85,7 @@ const Card = styled.div`
   border-radius: 10px;
   max-height: 340px;
   padding: 30px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
 
   &:hover {
@@ -103,8 +103,8 @@ const Icon = styled.img`
 
 const Title = styled.h1`
   font-size: 2.7rem;
-  font-weight: 600;
-  color: #fff;
+  font-weight: 700;
+  color: #e8591d;
   margin-bottom: 64px;
 
   @media screen and (max-width: 480px) {
