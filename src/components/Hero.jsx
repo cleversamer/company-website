@@ -31,7 +31,7 @@ const Hero = () => {
 
         <HeroBtnWrapper>
           <Button
-            to="discover"
+            to="contact-us"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary="true"
@@ -42,7 +42,7 @@ const Hero = () => {
             exact="true"
             offset={-80}
           >
-            إكتشفنا{hover ? <ArrowForward /> : <ArrowRight />}
+            تواصل معنا{hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
         </HeroBtnWrapper>
       </HeroContent>
