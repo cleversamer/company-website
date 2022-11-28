@@ -23,6 +23,10 @@ const Sidebar = ({ isOpen, onCloseMenu }) => {
             خدماتنا
           </SidebarLink>
 
+          <SidebarLink to="ads" onClick={onCloseMenu}>
+            إعلانات
+          </SidebarLink>
+
           <SidebarLink to="contact-us" onClick={onCloseMenu}>
             تواصل معنا
           </SidebarLink>

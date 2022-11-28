@@ -72,12 +72,24 @@ const Navbar = ({ onOpenMenu }) => {
 
             <NavItem>
               <NavLink
+                to="ads"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                activeClass="active"
+              >
+                إعلانات
+              </NavLink>
+            </NavItem>
+
+            <NavItem>
+              <NavLink
                 to="contact-us"
                 smooth={true}
                 duration={500}
                 spy={true}
                 exact="true"
-                offset={-50}
                 activeClass="active"
               >
                 تواصل معنا

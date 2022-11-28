@@ -5,6 +5,7 @@ import Sidebar from "components/Sidebar";
 import Hero from "components/Hero";
 import Info from "components/Info";
 import Services from "components/Services";
+import Ads from "components/Ads";
 import Footer from "components/Footer";
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
       <Hero />
       <Info data={data.home1} />
       <Services />
+      <Ads />
       <Info data={data.home2} />
       <Footer />
     </>
