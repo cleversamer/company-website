@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { Link as RouterLink } from "react-router-dom";
-import { animateScroll as scroll } from "react-scroll";
+// import { Link as RouterLink } from "react-router-dom";
 import {
   FaGoogle,
   FaInstagram,
@@ -8,6 +7,7 @@ import {
   FaTwitter,
   FaWhatsapp,
 } from "react-icons/fa";
+import Logo from "./Logo";
 
 const Footer = () => {
   return (
@@ -56,10 +56,7 @@ const Footer = () => {
 
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo href="#" onClick={() => scroll.scrollToTop()}>
-              <LogoPart1>top</LogoPart1>
-              <LogoPart2>line</LogoPart2>
-            </SocialLogo>
+            <Logo />
 
             <WebsiteRights>
               Top Line &copy; {new Date().getFullYear()}. All Rights Reserved.
@@ -127,57 +124,57 @@ const Wrap = styled.div`
   margin: 0 auto;
 `;
 
-const LinksContainer = styled.div`
-  display: flex;
-  justify-content: center;
+// const LinksContainer = styled.div`
+//   display: flex;
+//   justify-content: center;
 
-  @media screen and (max-width: 820px) {
-    padding-top: 32px;
-  }
-`;
+//   @media screen and (max-width: 820px) {
+//     padding-top: 32px;
+//   }
+// `;
 
-const LinksWrapper = styled.div`
-  display: flex;
+// const LinksWrapper = styled.div`
+//   display: flex;
 
-  @media screen and (max-width: 820px) {
-    flex-direction: column;
-  }
-`;
+//   @media screen and (max-width: 820px) {
+//     flex-direction: column;
+//   }
+// `;
 
-const LinkItems = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 16px;
-  text-align: left;
-  width: 160px;
-  box-sizing: border-box;
-  color: #fff;
+// const LinkItems = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start;
+//   margin: 16px;
+//   text-align: left;
+//   width: 160px;
+//   box-sizing: border-box;
+//   color: #fff;
 
-  @media screen and (max-width: 420px) {
-    margin: 0;
-    padding: 10px;
-    width: 100%;
-  }
-`;
+//   @media screen and (max-width: 420px) {
+//     margin: 0;
+//     padding: 10px;
+//     width: 100%;
+//   }
+// `;
 
-const LinkTitle = styled.h1`
-  color: #e8591d;
-  font-size: 14px;
-  margin-bottom: 16px;
-`;
+// const LinkTitle = styled.h1`
+//   color: #e8591d;
+//   font-size: 14px;
+//   margin-bottom: 16px;
+// `;
 
-const Link = styled(RouterLink)`
-  color: #fff;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-  font-size: 14px;
+// const Link = styled(RouterLink)`
+//   color: #fff;
+//   text-decoration: none;
+//   margin-bottom: 0.5rem;
+//   font-size: 14px;
 
-  &:hover {
-    color: #e8591d;
-    transition: 0.3s ease-out;
-  }
-`;
+//   &:hover {
+//     color: #e8591d;
+//     transition: 0.3s ease-out;
+//   }
+// `;
 
 const SocialMedia = styled.section`
   max-width: 1000px;
@@ -195,26 +192,6 @@ const SocialMediaWrap = styled.div`
   @media screen and (max-width: 820px) {
     flex-direction: column;
   }
-`;
-
-const SocialLogo = styled.a`
-  color: #e8591d;
-  justify-self: flex-start;
-  cursor: pointer;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  margin-bottom: 24px;
-  font-weight: 700;
-  text-decoration: none;
-`;
-
-const LogoPart1 = styled.span`
-  color: #e8591d;
-`;
-
-const LogoPart2 = styled.span`
-  color: #2b3864;
 `;
 
 const WebsiteRights = styled.small`

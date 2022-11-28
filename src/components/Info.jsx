@@ -3,27 +3,16 @@ import Button from "./Button";
 
 const Info = ({ data }) => {
   return (
-    <Container
-      id={data.id}
-      // lightbg={data.lightBg}
-    >
+    <Container id={data.id}>
       <InfoWrapper>
         <InfoRow imgstart={data.imgStart}>
           <Column1>
             <TextWrapper>
               <TopLine>{data.topLine}</TopLine>
 
-              <Heading
-              // lighttext={data.lightText}
-              >
-                {data.headLine}
-              </Heading>
+              <Heading>{data.headLine}</Heading>
 
-              <SubTitle
-              // darktext={data.darkText}
-              >
-                {data.description}
-              </SubTitle>
+              <SubTitle>{data.description}</SubTitle>
 
               {data.buttonLabel && (
                 <BtnWrap>
@@ -35,7 +24,6 @@ const Info = ({ data }) => {
                     exact="true"
                     offset={-80}
                     primary={data.primary ? 1 : 0}
-                    // dark={data.dark ? 1 : 0}
                   >
                     {data.buttonLabel}
                   </Button>
@@ -57,12 +45,7 @@ const Info = ({ data }) => {
 
 const Container = styled.div`
   color: #fff;
-  font-family: "Cairo", "sans-serif";
   background-color: #f9f9f9;
-
-  @media screen and (max-width: 768px) {
-    /* padding: 100px 0; */
-  }
 `;
 
 const InfoWrapper = styled.div`

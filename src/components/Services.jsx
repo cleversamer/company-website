@@ -38,7 +38,6 @@ const Services = () => {
 };
 
 const Container = styled.div`
-  font-family: "Cairo", "sans-serif";
   height: fit-content;
   display: flex;
   flex-direction: column;

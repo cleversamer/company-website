@@ -1,8 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 export const home1 = {
   id: "about",
-  lightBg: false,
-  lightText: true,
   lightDescText: true,
   topLine: "مقدّمي خدمات",
   headLine: "نقدّم خدمات عالية الكفاءة لعملائنا",
@@ -13,15 +11,11 @@ export const home1 = {
   imgStart: true,
   img: "/assets/images/svg-1.svg",
   alt: "Car",
-  dark: true,
   primary: true,
-  darkText: false,
 };
 
 export const home2 = {
   id: "contact-us",
-  lightBg: true,
-  lightText: false,
   lightDescText: false,
   topLine: "تواصل معنا بشكل مباشر",
   headLine: "تواصل معنا عبر بريدنا الإلكتروني",
@@ -31,9 +25,7 @@ export const home2 = {
   imgStart: true,
   img: "/assets/images/svg-1.svg",
   alt: "Paper",
-  dark: false,
   primary: false,
-  darkText: true,
 };
 
 export default {

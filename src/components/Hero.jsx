@@ -97,7 +97,6 @@ const VideoBg = styled.video`
 `;
 
 const HeroContent = styled.div`
-  font-family: "Cairo", sans-serif;
   z-index: 3;
   max-width: 1200px;
   position: absolute;
@@ -146,7 +145,6 @@ const HeroBtnWrapper = styled.div`
   align-items: center;
 
   a {
-    font-family: "Cairo", sans-serif;
     font-weight: 700;
   }
 `;

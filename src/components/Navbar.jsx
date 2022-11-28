@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import { FaBars, FaWhatsapp } from "react-icons/fa";
+import Logo from "./Logo";
 
 const Navbar = ({ onOpenMenu }) => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -20,10 +21,7 @@ const Navbar = ({ onOpenMenu }) => {
     <>
       <Nav scrollnav={scrollNav}>
         <NavbarContainer>
-          <NavLogo href="#" onClick={() => scroll.scrollToTop()}>
-            <Part1>top</Part1>
-            <Part2>line</Part2>
-          </NavLogo>
+          <Logo />
 
           <MobileIcon scrollnav={scrollNav} onClick={onOpenMenu}>
             <FaBars />
@@ -124,6 +122,7 @@ const Nav = styled.nav`
 
 const NavbarContainer = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-between;
   height: 80px;
   z-index: 1;
@@ -132,36 +131,12 @@ const NavbarContainer = styled.div`
   max-width: 1100px;
 `;
 
-const NavLogo = styled.a`
-  color: #e8591d;
-  justify-self: flex-start;
-  cursor: pointer;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  margin-left: 24px;
-  font-weight: 700;
-  text-decoration: none;
-`;
-
-const Part1 = styled.span`
-  color: #e8591d;
-`;
-
-const Part2 = styled.span`
-  color: #2b3864;
-`;
-
 const MobileIcon = styled.div`
   display: none;
   color: ${({ scrollnav }) => (scrollnav ? "#010606" : "#fff")};
 
   @media screen and (max-width: 768px) {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
   }
@@ -184,7 +159,6 @@ const NavItem = styled.li`
 `;
 
 const NavLink = styled(ScrollLink)`
-  font-family: "Cairo", sans-serif;
   font-size: 18px;
   font-weight: 600;
   color: inherit;
@@ -215,7 +189,6 @@ const NavBtn = styled.nav`
 `;
 
 const NavBtnLink = styled.a`
-  font-family: "Cairo", sans-serif;
   font-weight: 600;
   border-radius: 50px;
   background-color: ${({ scrollnav }) => (scrollnav ? "#010606" : "#e8591d")};

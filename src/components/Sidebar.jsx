@@ -43,7 +43,6 @@ const Sidebar = ({ isOpen, onCloseMenu }) => {
 };
 
 const Container = styled.aside`
-  font-family: "Cairo", "sans-serif";
   position: fixed;
   z-index: 999;
   width: 100%;
