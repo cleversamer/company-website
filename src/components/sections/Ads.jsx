@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ImagesSlider from "./Slider";
+import Slider from "components/common/Slider";
 
 const Ads = () => {
   return (
@@ -7,7 +7,7 @@ const Ads = () => {
       <Title>إعلانات</Title>
 
       <Wrapper>
-        <ImagesSlider />
+        <Slider />
       </Wrapper>
     </Container>
   );

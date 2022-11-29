@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link as ScrollLink } from "react-scroll";
 import { FaBars, FaWhatsapp } from "react-icons/fa";
-import Logo from "./Logo";
+import Logo from "components/common/Logo";
 
 const Navbar = ({ onOpenMenu }) => {
   const [scrollNav, setScrollNav] = useState(false);

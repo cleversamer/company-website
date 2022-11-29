@@ -1,12 +1,12 @@
 import { useState } from "react";
 import data from "data";
-import Navbar from "components/Navbar";
-import Sidebar from "components/Sidebar";
-import Hero from "components/Hero";
-import Info from "components/Info";
-import Services from "components/Services";
-import Ads from "components/Ads";
-import Footer from "components/Footer";
+import Navbar from "components/navigation/Navbar";
+import Sidebar from "components/navigation/Sidebar";
+import Hero from "components/sections/Hero";
+import Info from "components/sections/Info";
+import Services from "components/sections/Services";
+import Ads from "components/sections/Ads";
+import Footer from "components/sections/Footer";
 
 const Home = () => {
   const [isOpen, setOpen] = useState(false);

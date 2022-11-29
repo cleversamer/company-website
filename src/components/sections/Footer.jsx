@@ -7,7 +7,7 @@ import {
   FaTwitter,
   FaWhatsapp,
 } from "react-icons/fa";
-import Logo from "./Logo";
+import Logo from "components/common/Logo";
 
 const Footer = () => {
   return (

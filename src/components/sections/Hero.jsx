@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { MdArrowForward, MdKeyboardArrowRight } from "react-icons/md";
-import Button from "./Button";
+import Button from "components/common/Button";
 
 const Hero = () => {
   const [hover, setHover] = useState(false);
