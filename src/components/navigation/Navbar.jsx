@@ -23,7 +23,7 @@ const Navbar = ({ onOpenMenu }) => {
         <NavbarContainer>
           <Logo />
 
-          <MobileIcon scrollnav={scrollNav} onClick={onOpenMenu}>
+          <MobileIcon onClick={onOpenMenu}>
             <FaBars />
           </MobileIcon>
 
@@ -41,20 +41,6 @@ const Navbar = ({ onOpenMenu }) => {
                 من نحن
               </NavLink>
             </NavItem>
-
-            {/* <NavItem>
-              <NavLink
-                to="discover"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
-                activeClass="active"
-              >
-                إكتشفنا
-              </NavLink>
-            </NavItem> */}
 
             <NavItem>
               <NavLink
@@ -125,7 +111,7 @@ const Nav = styled.nav`
   font-size: 1rem;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 99999;
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
@@ -145,7 +131,7 @@ const NavbarContainer = styled.div`
 
 const MobileIcon = styled.div`
   display: none;
-  color: ${({ scrollnav }) => (scrollnav ? "#010606" : "#fff")};
+  color: #010606;
 
   @media screen and (max-width: 768px) {
     display: block;
@@ -180,6 +166,7 @@ const NavLink = styled(ScrollLink)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  color: #010606;
 
   &:hover {
     transition: 0.2s ease-out;
@@ -203,10 +190,10 @@ const NavBtn = styled.nav`
 const NavBtnLink = styled.a`
   font-weight: 600;
   border-radius: 50px;
-  background-color: ${({ scrollnav }) => (scrollnav ? "#010606" : "#e8591d")};
+  background-color: #e8591d;
   white-space: nowrap;
   padding: 10px 22px;
-  color: ${({ scrollnav }) => (scrollnav ? "#fff" : "#010606")};
+  color: #010606;
   font-size: 16px;
   outline: none;
   border: none;
@@ -223,8 +210,7 @@ const NavBtnLink = styled.a`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background-color: ${({ scrollnav }) => (scrollnav ? "#e8591d" : "#fff")};
-    color: ${({ scrollnav }) => (scrollnav ? "#fff" : "#010606")};
+    color: #fff;
   }
 `;
 

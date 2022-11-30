@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import { Link as RouterLink } from "react-router-dom";
 import {
   FaGoogle,
   FaInstagram,
@@ -13,47 +12,6 @@ const Footer = () => {
   return (
     <Container>
       <Wrap>
-        {/* <LinksContainer>
-          <LinksWrapper>
-            <LinkItems>
-              <LinkTitle>من نحن</LinkTitle>
-              <Link to="">كيف يمكنك </Link>
-              <Link to="">Testimonials</Link>
-              <Link to="">Careers</Link>
-              <Link to="">Investors</Link>
-              <Link to="">Terms of service</Link>
-            </LinkItems>
-
-            <LinkItems>
-              <LinkTitle>Videos</LinkTitle>
-              <Link to="">How it works</Link>
-              <Link to="">Testimonials</Link>
-              <Link to="">Careers</Link>
-              <Link to="">Investors</Link>
-              <Link to="">Terms of service</Link>
-            </LinkItems>
-          </LinksWrapper>
-
-          <LinksWrapper>
-            <LinkItems>
-              <LinkTitle>Contact Us</LinkTitle>
-              <Link to="">How it works</Link>
-              <Link to="">Testimonials</Link>
-              <Link to="">Careers</Link>
-              <Link to="">Investors</Link>
-              <Link to="">Terms of service</Link>
-            </LinkItems>
-
-            <LinkItems>
-              <LinkTitle>Social Media</LinkTitle>
-              <Link to="">Facebook</Link>
-              <Link to="">Instagram</Link>
-              <Link to="">Twitter</Link>
-              <Link to="">YouTube</Link>
-            </LinkItems>
-          </LinksWrapper>
-        </LinksContainer> */}
-
         <SocialMedia>
           <SocialMediaWrap>
             <Logo />
@@ -123,58 +81,6 @@ const Wrap = styled.div`
   max-width: 1100px;
   margin: 0 auto;
 `;
-
-// const LinksContainer = styled.div`
-//   display: flex;
-//   justify-content: center;
-
-//   @media screen and (max-width: 820px) {
-//     padding-top: 32px;
-//   }
-// `;
-
-// const LinksWrapper = styled.div`
-//   display: flex;
-
-//   @media screen and (max-width: 820px) {
-//     flex-direction: column;
-//   }
-// `;
-
-// const LinkItems = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: flex-start;
-//   margin: 16px;
-//   text-align: left;
-//   width: 160px;
-//   box-sizing: border-box;
-//   color: #fff;
-
-//   @media screen and (max-width: 420px) {
-//     margin: 0;
-//     padding: 10px;
-//     width: 100%;
-//   }
-// `;
-
-// const LinkTitle = styled.h1`
-//   color: #e8591d;
-//   font-size: 14px;
-//   margin-bottom: 16px;
-// `;
-
-// const Link = styled(RouterLink)`
-//   color: #fff;
-//   text-decoration: none;
-//   margin-bottom: 0.5rem;
-//   font-size: 14px;
-
-//   &:hover {
-//     color: #e8591d;
-//     transition: 0.3s ease-out;
-//   }
-// `;
 
 const SocialMedia = styled.section`
   max-width: 1000px;

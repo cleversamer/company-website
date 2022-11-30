@@ -11,9 +11,11 @@
     "react-dom": "^18.2.0",
     "react-elastic-carousel": "^0.11.5",
     "react-icons": "^4.6.0",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
     "react-scroll": "^1.8.8",
+    "react-typed": "^1.2.0",
     "styled-components": "^5.3.6"
   },
   "scripts": {

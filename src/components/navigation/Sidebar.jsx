@@ -6,7 +6,7 @@ const Sidebar = ({ isOpen, onCloseMenu }) => {
   return (
     <Container isOpen={isOpen}>
       <Icon onClick={onCloseMenu}>
-        <CloseIcon />
+        <CloseIcon color="#243262" />
       </Icon>
 
       <SidebarWrapper>
@@ -14,10 +14,6 @@ const Sidebar = ({ isOpen, onCloseMenu }) => {
           <SidebarLink to="about" onClick={onCloseMenu}>
             من نحن
           </SidebarLink>
-
-          {/* <SidebarLink to="discover" onClick={onCloseMenu}>
-            Discover
-          </SidebarLink> */}
 
           <SidebarLink to="services" onClick={onCloseMenu}>
             خدماتنا
@@ -48,10 +44,10 @@ const Sidebar = ({ isOpen, onCloseMenu }) => {
 
 const Container = styled.aside`
   position: fixed;
-  z-index: 999;
+  z-index: 9999999999;
   width: 100%;
   height: 100%;
-  background-color: #0d0d0d;
+  background-color: #f9f9f9;
   display: grid;
   align-items: center;
   top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
@@ -97,7 +93,7 @@ const SidebarLink = styled(ScrollLink)`
   text-decoration: none;
   list-style: none;
   transition: 0.2s ease-in-out;
-  color: #fff;
+  color: #243262;
   cursor: pointer;
 
   &:hover {
@@ -134,8 +130,8 @@ const SidebarOuterLink = styled.a`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background-color: #fff;
-    color: #010606;
+    background-color: #243262;
+    color: #fff;
   }
 `;
 

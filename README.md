@@ -2,20 +2,26 @@
 
 ## 🔴 Live Demo
 
-Not live yet...
+[Click here...](https://top-line-team.web.app)
 
 ## Description
 
-A website for an online service provider company.
+A website for an online services provider company.
 
 ## Getting Started
 
 ### Dependencies
 
-- React
-- React DOM
-- React Router DOM
-- Styled Components
+- react
+- react-dom
+- react-elastic-carousel
+- react-icons
+- react-responsive-carousel
+- react-router-dom
+- react-scripts
+- react-scroll
+- react-typed
+- styled-components
 
 ### Installing
 
