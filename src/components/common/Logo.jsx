@@ -9,7 +9,11 @@ const Logo = () => {
   );
 };
 
-const Container = styled.a``;
+const Container = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 const Image = styled.img`
   height: 50px;

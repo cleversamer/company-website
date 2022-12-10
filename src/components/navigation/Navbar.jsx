@@ -44,6 +44,20 @@ const Navbar = ({ onOpenMenu }) => {
 
             <NavItem>
               <NavLink
+                to="gifts"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+                activeClass="active"
+              >
+                جوائز المؤتمرات
+              </NavLink>
+            </NavItem>
+
+            <NavItem>
+              <NavLink
                 to="services"
                 smooth={true}
                 duration={500}
@@ -65,20 +79,20 @@ const Navbar = ({ onOpenMenu }) => {
                 exact="true"
                 activeClass="active"
               >
-                إعلانات
+                جديد الإعلانات
               </NavLink>
             </NavItem>
 
             <NavItem>
               <NavLink
-                to="contact-us"
+                to="partners"
                 smooth={true}
                 duration={500}
                 spy={true}
                 exact="true"
                 activeClass="active"
               >
-                تواصل معنا
+                آراء الشركاء
               </NavLink>
             </NavItem>
           </NavMenu>
@@ -131,7 +145,7 @@ const NavbarContainer = styled.div`
 
 const MobileIcon = styled.div`
   display: none;
-  color: #010606;
+  color: #243262;
 
   @media screen and (max-width: 768px) {
     display: block;
@@ -157,7 +171,7 @@ const NavItem = styled.li`
 `;
 
 const NavLink = styled(ScrollLink)`
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
   color: inherit;
   display: flex;

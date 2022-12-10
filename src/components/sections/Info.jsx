@@ -1,15 +1,14 @@
 import styled from "styled-components";
 import Button from "components/common/Button";
+import Video from "components/common/Video";
 
 const Info = ({ data }) => {
   return (
     <Container id={data.id}>
       <InfoWrapper>
-        <InfoRow imgstart={data.imgStart}>
+        <InfoRow mediastart={data.mediaStart}>
           <Column1>
             <TextWrapper>
-              <TopLine>{data.topLine}</TopLine>
-
               <Heading>{data.headLine}</Heading>
 
               <SubTitle>{data.description}</SubTitle>
@@ -33,9 +32,13 @@ const Info = ({ data }) => {
           </Column1>
 
           <Column2>
-            <ImgWrap>
-              <Img src={data.img} alt={data.alt} />
-            </ImgWrap>
+            <MediaWrap>
+              {data.mediaType === "image" ? (
+                <Img src={data.source} alt={data.alt} />
+              ) : (
+                <Video src={data.source} autoPlay loop />
+              )}
+            </MediaWrap>
           </Column2>
         </InfoRow>
       </InfoWrapper>
@@ -46,6 +49,14 @@ const Info = ({ data }) => {
 const Container = styled.div`
   color: #fff;
   background-color: #f9f9f9;
+
+  :first-of-type {
+    margin-top: 40px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: 40px;
+  }
 `;
 
 const InfoWrapper = styled.div`
@@ -68,13 +79,13 @@ const InfoWrapper = styled.div`
 const InfoRow = styled.div`
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
-  align-items: center;
-  grid-template-areas: ${({ imgstart }) =>
-    imgstart ? `"col2 col1"` : `"col1 col2"`};
+  /* align-items: center; */
+  grid-template-areas: ${({ mediastart }) =>
+    mediastart ? `"col2 col1"` : `"col1 col2"`};
 
   @media screen and (max-width: 768px) {
-    grid-template-areas: ${({ imgstart }) =>
-      imgstart ? `"col1" "col2"` : `"col1 col1" "col2 col2"`};
+    grid-template-areas: ${({ mediastart }) =>
+      mediastart ? `"col1" "col2"` : `"col1 col1" "col2 col2"`};
   }
 `;
 
@@ -96,22 +107,12 @@ const TextWrapper = styled.div`
   padding-bottom: 60px;
 `;
 
-const TopLine = styled.p`
-  color: #e8591d;
-  font-size: 18px;
-  line-height: 16px;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-`;
-
 const Heading = styled.h1`
+  color: #e8591d;
   margin-bottom: 24px;
   font-size: 36px;
   line-height: 1.5;
   font-weight: 700;
-  color: #010606;
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
@@ -138,7 +139,7 @@ const BtnWrap = styled.div`
   }
 `;
 
-const ImgWrap = styled.div`
+const MediaWrap = styled.div`
   max-width: 555px;
   height: 100%;
 `;

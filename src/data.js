@@ -1,29 +1,27 @@
 /* eslint-disable import/no-anonymous-default-export */
 export const home1 = {
   id: "about",
-  lightDescText: true,
-  topLine: "مقدّمي خدمات",
   headLine: "نقدّم خدمات عالية الكفاءة لعملائنا",
   description:
-    "أطلب خدمتك من فريقنا المتميّز وأحصل على عمل ودعم مثالي من فريقنا",
+    "مجموعة متخصصة نقدم استشارتنا في المجالات المتعددة في الجوانب البحثية والتربوية والإدارية، نساهم في تطوير الفرد والمؤسسات نحو التميز والصدارة في جميع المنافسات المحلية والدولية والارتقاء الوظيفي، نعمل من خلال معايير الجودة المتقدمة ونتميز بشمولية اعمالنا، ونهتم بالحقوق المحفوظة لعملائنا",
   buttonLabel: "خدماتنا",
   buttonTo: "services",
-  imgStart: true,
-  img: "/assets/images/svg-1.svg",
+  mediaType: "video",
+  mediaStart: true,
+  source: "/assets/media/vid-2.mp4",
   alt: "Car",
   primary: true,
 };
 
 export const home2 = {
   id: "contact-us",
-  lightDescText: false,
-  topLine: "تواصل معنا بشكل مباشر",
   headLine: "تواصل معنا عبر بريدنا الإلكتروني",
   description:
     "تواصل معنا عبر بريدنا الإلكتروني أو بشكل مباشر عبر وسائل التواصل الإجتماعي أسفل الصفحة",
   buttonLabel: "",
-  imgStart: true,
-  img: "/assets/images/svg-1.svg",
+  mediaType: "image",
+  mediaStart: true,
+  source: "/assets/images/svg-1.svg",
   alt: "Paper",
   primary: false,
 };

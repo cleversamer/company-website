@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-const Services = () => {
+const Partners = () => {
   return (
-    <Container id="services">
-      <Title>خدماتنا</Title>
+    <Container id="partners">
+      <Title>آراء الشركاء</Title>
 
       <Wrapper>
         <Card>
@@ -44,8 +44,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #f9f9f9;
-  padding: 20px 24px;
-  padding-bottom: 100px;
+  padding: 100px 24px;
+  padding-bottom: 150px;
 
   @media screen and (max-width: 768px) {
     height: 1100px;
@@ -121,4 +121,4 @@ const Description = styled.p`
   text-align: center;
 `;
 
-export default Services;
+export default Partners;

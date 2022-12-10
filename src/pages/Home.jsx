@@ -1,20 +1,19 @@
 import data from "data";
-import Navigation from "components/common/Navigation";
-import Hero from "components/sections/Hero";
+import Navigation from "components/navigation";
 import Info from "components/sections/Info";
-import Services from "components/sections/Services";
+import Gifts from "components/sections/Gifts";
 import Ads from "components/sections/Ads";
 import Footer from "components/sections/Footer";
+import Partners from "components/sections/Partners";
 
 const Home = () => {
   return (
     <>
       <Navigation />
-      <Hero />
       <Info data={data.home1} />
-      <Services />
+      <Gifts />
       <Ads />
-      <Info data={data.home2} />
+      <Partners />
       <Footer />
     </>
   );
