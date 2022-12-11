@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Link as ScrollLink } from "react-scroll";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 import { FaBars, FaWhatsapp } from "react-icons/fa";
+import { RxDoubleArrowDown } from "react-icons/rx";
 import Logo from "components/common/Logo";
 
 const Navbar = ({ onOpenMenu }) => {
@@ -57,17 +59,41 @@ const Navbar = ({ onOpenMenu }) => {
             </NavItem>
 
             <NavItem>
-              <NavLink
-                to="services"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-50}
-                activeClass="active"
-              >
-                خدماتنا
+              <NavLink onClick={() => scroll.scrollToTop()}>
+                <RxDoubleArrowDown /> خدماتنا
               </NavLink>
+
+              <SubMenu>
+                <NavItem>
+                  <NavRoute to="/">محور جوائز التميز</NavRoute>
+                </NavItem>
+
+                <NavItem>
+                  <NavRoute to="/">محور الأبحاث والكتب والترجمة</NavRoute>
+                </NavItem>
+
+                <NavItem>
+                  <NavRoute to="/">محور خدمات منسوبي التعليم</NavRoute>
+                </NavItem>
+
+                <NavItem>
+                  <NavRoute to="/">محور المبادرات</NavRoute>
+                </NavItem>
+
+                <NavItem>
+                  <NavRoute to="/">محور الحقائب التدريبية</NavRoute>
+                </NavItem>
+
+                <NavItem>
+                  <NavRoute to="/">محور التصميم</NavRoute>
+                </NavItem>
+
+                <NavItem>
+                  <NavRoute to="/">
+                    محور الخدمات البرمجية وتطبيقات الجوال
+                  </NavRoute>
+                </NavItem>
+              </SubMenu>
             </NavItem>
 
             <NavItem>
@@ -168,6 +194,26 @@ const NavMenu = styled.ul`
 
 const NavItem = styled.li`
   height: 80px;
+  position: relative;
+
+  &:hover ul {
+    display: block;
+  }
+`;
+
+const SubMenu = styled(NavMenu)`
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  left: -50%;
+  color: #010606;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: none;
+
+  ${NavItem} {
+    height: fit-content;
+  }
 `;
 
 const NavLink = styled(ScrollLink)`
@@ -176,6 +222,7 @@ const NavLink = styled(ScrollLink)`
   color: inherit;
   display: flex;
   align-items: center;
+  gap: 7px;
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
@@ -189,6 +236,20 @@ const NavLink = styled(ScrollLink)`
 
   &.active {
     border-bottom: 3px solid #e8591d;
+  }
+`;
+
+const NavRoute = styled(RouterLink)`
+  display: inline-block;
+  width: 230px;
+  font-size: 14px;
+  padding: 7px 4px;
+  border-bottom: 1px solid #eee;
+  transition-duration: 200ms;
+
+  &:hover {
+    transition: 0.2s ease-out;
+    color: #e8591d;
   }
 `;
 
