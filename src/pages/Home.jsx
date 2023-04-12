@@ -3,8 +3,9 @@ import Navigation from "components/navigation";
 import Info from "components/sections/Info";
 import Gifts from "components/sections/Gifts";
 import Ads from "components/sections/Ads";
-import Footer from "components/sections/Footer";
 import Partners from "components/sections/Partners";
+import Footer from "components/sections/Footer";
+import AnimatedFooter from "components/sections/AnimatedFooter";
 
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
       <Gifts />
       <Ads />
       <Partners />
-      <Footer />
+      <AnimatedFooter />
     </>
   );
 };
